@@ -1,0 +1,3 @@
+[submodule "Example/KeyedFileStorage"]
+	path = Example/KeyedFileStorage
+	url = https://github.com/srainier/KeyedFileStorage

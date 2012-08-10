@@ -19,6 +19,10 @@
 		7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A615D49AD000EA4BCB /* DownloadQueues.m */; };
 		7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A815D49AD000EA4BCB /* DownloadItem.m */; };
 		7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */; };
+		7D4785B415D4A26900EA4BCB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785AF15D4A26900EA4BCB /* .gitignore */; };
+		7D4785B515D4A26900EA4BCB /* KeyedFileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785B115D4A26900EA4BCB /* KeyedFileStorage.m */; };
+		7D4785B615D4A26900EA4BCB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785B215D4A26900EA4BCB /* LICENSE */; };
+		7D4785B715D4A26900EA4BCB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785B315D4A26900EA4BCB /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +46,11 @@
 		7D4785A815D49AD000EA4BCB /* DownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadItem.m; sourceTree = "<group>"; };
 		7D4785AB15D49CD100EA4BCB /* NSFileManager+TempFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TempFile.h"; sourceTree = "<group>"; };
 		7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TempFile.m"; sourceTree = "<group>"; };
+		7D4785AF15D4A26900EA4BCB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		7D4785B015D4A26900EA4BCB /* KeyedFileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedFileStorage.h; sourceTree = "<group>"; };
+		7D4785B115D4A26900EA4BCB /* KeyedFileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyedFileStorage.m; sourceTree = "<group>"; };
+		7D4785B215D4A26900EA4BCB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		7D4785B315D4A26900EA4BCB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		844F5B94860D4CFDB2C69490 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +101,7 @@
 		7D47858515D4928F00EA4BCB /* DownloadQueuesExample */ = {
 			isa = PBXGroup;
 			children = (
+				7D4785AE15D4A26800EA4BCB /* KeyedFileStorage */,
 				7D4785A415D49AD000EA4BCB /* DownloadQueues */,
 				7D47859E15D49A8A00EA4BCB /* MainViewController.h */,
 				7D47859F15D49A8A00EA4BCB /* MainViewController.m */,
@@ -127,6 +137,18 @@
 			name = DownloadQueues;
 			path = ../../DownloadQueues;
 			sourceTree = "<group>";
+		};
+		7D4785AE15D4A26800EA4BCB /* KeyedFileStorage */ = {
+			isa = PBXGroup;
+			children = (
+				7D4785AF15D4A26900EA4BCB /* .gitignore */,
+				7D4785B015D4A26900EA4BCB /* KeyedFileStorage.h */,
+				7D4785B115D4A26900EA4BCB /* KeyedFileStorage.m */,
+				7D4785B215D4A26900EA4BCB /* LICENSE */,
+				7D4785B315D4A26900EA4BCB /* README.md */,
+			);
+			path = KeyedFileStorage;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -182,6 +204,9 @@
 			files = (
 				7D47858A15D4928F00EA4BCB /* InfoPlist.strings in Resources */,
 				7D4785A215D49A8A00EA4BCB /* MainViewController.xib in Resources */,
+				7D4785B415D4A26900EA4BCB /* .gitignore in Resources */,
+				7D4785B615D4A26900EA4BCB /* LICENSE in Resources */,
+				7D4785B715D4A26900EA4BCB /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +240,7 @@
 				7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */,
 				7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */,
 				7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */,
+				7D4785B515D4A26900EA4BCB /* KeyedFileStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
