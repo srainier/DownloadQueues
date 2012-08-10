@@ -14,3 +14,5 @@ xcuserdata
 profile
 *.moved-aside
 *.swp
+Podfile.lock
+Example/Pods/*
