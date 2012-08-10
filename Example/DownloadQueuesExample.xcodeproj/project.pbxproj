@@ -1,599 +1,332 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>archiveVersion</key>
-	<string>1</string>
-	<key>classes</key>
-	<dict/>
-	<key>objectVersion</key>
-	<string>46</string>
-	<key>objects</key>
-	<dict>
-		<key>4F2F2005533142D3853DD1C8</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
-			<key>path</key>
-			<string>libPods.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>66B9FED779AB4506B2828D8D</key>
-		<dict>
-			<key>fileRef</key>
-			<string>4F2F2005533142D3853DD1C8</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47857015D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47858515D4928F00EA4BCB</string>
-				<string>7D47857E15D4928F00EA4BCB</string>
-				<string>7D47857C15D4928F00EA4BCB</string>
-				<string>844F5B94860D4CFDB2C69490</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47857215D4928F00EA4BCB</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0440</string>
-				<key>ORGANIZATIONNAME</key>
-				<string>Shane Arney</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>7D47857515D4928F00EA4BCB</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>7D47857015D4928F00EA4BCB</string>
-			<key>productRefGroup</key>
-			<string>7D47857C15D4928F00EA4BCB</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>7D47857A15D4928F00EA4BCB</string>
-			</array>
-		</dict>
-		<key>7D47857515D4928F00EA4BCB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7D47859115D4928F00EA4BCB</string>
-				<string>7D47859215D4928F00EA4BCB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7D47857715D4928F00EA4BCB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7D47858C15D4928F00EA4BCB</string>
-				<string>7D47859015D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7D47857815D4928F00EA4BCB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7D47858015D4928F00EA4BCB</string>
-				<string>7D47858215D4928F00EA4BCB</string>
-				<string>7D47858415D4928F00EA4BCB</string>
-				<string>66B9FED779AB4506B2828D8D</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7D47857915D4928F00EA4BCB</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>7D47858A15D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXResourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>7D47857A15D4928F00EA4BCB</key>
-		<dict>
-			<key>buildConfigurationList</key>
-			<string>7D47859315D4928F00EA4BCB</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7D47857715D4928F00EA4BCB</string>
-				<string>7D47857815D4928F00EA4BCB</string>
-				<string>7D47857915D4928F00EA4BCB</string>
-				<string>B693CA6CCB4C43ABA38AFA38</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>DownloadQueuesExample</string>
-			<key>productName</key>
-			<string>DownloadQueuesExample</string>
-			<key>productReference</key>
-			<string>7D47857B15D4928F00EA4BCB</string>
-			<key>productType</key>
-			<string>com.apple.product-type.application</string>
-		</dict>
-		<key>7D47857B15D4928F00EA4BCB</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>wrapper.application</string>
-			<key>includeInIndex</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>DownloadQueuesExample.app</string>
-			<key>path</key>
-			<string>DownloadQueuesExample.app</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
-		</dict>
-		<key>7D47857C15D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47857B15D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47857E15D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47857F15D4928F00EA4BCB</string>
-				<string>7D47858115D4928F00EA4BCB</string>
-				<string>7D47858315D4928F00EA4BCB</string>
-				<string>4F2F2005533142D3853DD1C8</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47857F15D4928F00EA4BCB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>UIKit.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/UIKit.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7D47858015D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47857F15D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47858115D4928F00EA4BCB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7D47858215D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47858115D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47858315D4928F00EA4BCB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>CoreGraphics.framework</string>
-			<key>path</key>
-			<string>System/Library/Frameworks/CoreGraphics.framework</string>
-			<key>sourceTree</key>
-			<string>SDKROOT</string>
-		</dict>
-		<key>7D47858415D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47858315D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47858515D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47858E15D4928F00EA4BCB</string>
-				<string>7D47858F15D4928F00EA4BCB</string>
-				<string>7D47858615D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>path</key>
-			<string>DownloadQueuesExample</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858615D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47858715D4928F00EA4BCB</string>
-				<string>7D47858815D4928F00EA4BCB</string>
-				<string>7D47858B15D4928F00EA4BCB</string>
-				<string>7D47858D15D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Supporting Files</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858715D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
-			<key>path</key>
-			<string>DownloadQueuesExample-Info.plist</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858815D4928F00EA4BCB</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7D47858915D4928F00EA4BCB</string>
-			</array>
-			<key>isa</key>
-			<string>PBXVariantGroup</string>
-			<key>name</key>
-			<string>InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858915D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.plist.strings</string>
-			<key>name</key>
-			<string>en</string>
-			<key>path</key>
-			<string>en.lproj/InfoPlist.strings</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858A15D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47858815D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47858B15D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>main.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858C15D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47858B15D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47858D15D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>DownloadQueuesExample-Prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858E15D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>AppDelegate.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47858F15D4928F00EA4BCB</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>AppDelegate.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>7D47859015D4928F00EA4BCB</key>
-		<dict>
-			<key>fileRef</key>
-			<string>7D47858F15D4928F00EA4BCB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>7D47859115D4928F00EA4BCB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7D47859215D4928F00EA4BCB</key>
-		<dict>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_32_BIT)</string>
-				<key>CLANG_CXX_LANGUAGE_STANDARD</key>
-				<string>gnu++0x</string>
-				<key>CLANG_ENABLE_OBJC_ARC</key>
-				<string>YES</string>
-				<key>CLANG_WARN__DUPLICATE_METHOD_MATCH</key>
-				<string>YES</string>
-				<key>CODE_SIGN_IDENTITY[sdk=iphoneos*]</key>
-				<string>iPhone Developer</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>GCC_WARN_ABOUT_RETURN_TYPE</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNINITIALIZED_AUTOS</key>
-				<string>YES</string>
-				<key>GCC_WARN_UNUSED_VARIABLE</key>
-				<string>YES</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>5.1</string>
-				<key>OTHER_CFLAGS</key>
-				<string>-DNS_BLOCK_ASSERTIONS=1</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>7D47859315D4928F00EA4BCB</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>7D47859415D4928F00EA4BCB</string>
-				<string>7D47859515D4928F00EA4BCB</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
-		</dict>
-		<key>7D47859415D4928F00EA4BCB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>844F5B94860D4CFDB2C69490</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>DownloadQueuesExample/DownloadQueuesExample-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DownloadQueuesExample/DownloadQueuesExample-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Debug</string>
-		</dict>
-		<key>7D47859515D4928F00EA4BCB</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>844F5B94860D4CFDB2C69490</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>DownloadQueuesExample/DownloadQueuesExample-Prefix.pch</string>
-				<key>INFOPLIST_FILE</key>
-				<string>DownloadQueuesExample/DownloadQueuesExample-Info.plist</string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>WRAPPER_EXTENSION</key>
-				<string>app</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
-			<string>Release</string>
-		</dict>
-		<key>844F5B94860D4CFDB2C69490</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>name</key>
-			<string>Pods.xcconfig</string>
-			<key>path</key>
-			<string>Pods/Pods.xcconfig</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>B693CA6CCB4C43ABA38AFA38</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array/>
-			<key>inputPaths</key>
-			<array/>
-			<key>isa</key>
-			<string>PBXShellScriptBuildPhase</string>
-			<key>name</key>
-			<string>Copy Pods Resources</string>
-			<key>outputPaths</key>
-			<array/>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-			<key>shellPath</key>
-			<string>/bin/sh</string>
-			<key>shellScript</key>
-			<string>"${SRCROOT}/Pods/Pods-resources.sh"
-</string>
-		</dict>
-	</dict>
-	<key>rootObject</key>
-	<string>7D47857215D4928F00EA4BCB</string>
-</dict>
-</plist>
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66B9FED779AB4506B2828D8D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4F2F2005533142D3853DD1C8 /* libPods.a */; };
+		7D47858015D4928F00EA4BCB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47857F15D4928F00EA4BCB /* UIKit.framework */; };
+		7D47858215D4928F00EA4BCB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47858115D4928F00EA4BCB /* Foundation.framework */; };
+		7D47858415D4928F00EA4BCB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D47858315D4928F00EA4BCB /* CoreGraphics.framework */; };
+		7D47858A15D4928F00EA4BCB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D47858815D4928F00EA4BCB /* InfoPlist.strings */; };
+		7D47858C15D4928F00EA4BCB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D47858B15D4928F00EA4BCB /* main.m */; };
+		7D47859015D4928F00EA4BCB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D47858F15D4928F00EA4BCB /* AppDelegate.m */; };
+		7D4785A115D49A8A00EA4BCB /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D47859F15D49A8A00EA4BCB /* MainViewController.m */; };
+		7D4785A215D49A8A00EA4BCB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785A015D49A8A00EA4BCB /* MainViewController.xib */; };
+		7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A615D49AD000EA4BCB /* DownloadQueues.m */; };
+		7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A815D49AD000EA4BCB /* DownloadItem.m */; };
+		7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F2F2005533142D3853DD1C8 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D47857B15D4928F00EA4BCB /* DownloadQueuesExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadQueuesExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D47857F15D4928F00EA4BCB /* UIKit.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D47858115D4928F00EA4BCB /* Foundation.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D47858315D4928F00EA4BCB /* CoreGraphics.framework */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D47858715D4928F00EA4BCB /* DownloadQueuesExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DownloadQueuesExample-Info.plist"; sourceTree = "<group>"; };
+		7D47858915D4928F00EA4BCB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D47858B15D4928F00EA4BCB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D47858D15D4928F00EA4BCB /* DownloadQueuesExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DownloadQueuesExample-Prefix.pch"; sourceTree = "<group>"; };
+		7D47858E15D4928F00EA4BCB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		7D47858F15D4928F00EA4BCB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		7D47859E15D49A8A00EA4BCB /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		7D47859F15D49A8A00EA4BCB /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		7D4785A015D49A8A00EA4BCB /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		7D4785A515D49AD000EA4BCB /* DownloadQueues.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadQueues.h; sourceTree = "<group>"; };
+		7D4785A615D49AD000EA4BCB /* DownloadQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadQueues.m; sourceTree = "<group>"; };
+		7D4785A715D49AD000EA4BCB /* DownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadItem.h; sourceTree = "<group>"; };
+		7D4785A815D49AD000EA4BCB /* DownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadItem.m; sourceTree = "<group>"; };
+		7D4785AB15D49CD100EA4BCB /* NSFileManager+TempFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TempFile.h"; sourceTree = "<group>"; };
+		7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TempFile.m"; sourceTree = "<group>"; };
+		844F5B94860D4CFDB2C69490 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7D47857815D4928F00EA4BCB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D47858015D4928F00EA4BCB /* UIKit.framework in Frameworks */,
+				7D47858215D4928F00EA4BCB /* Foundation.framework in Frameworks */,
+				7D47858415D4928F00EA4BCB /* CoreGraphics.framework in Frameworks */,
+				66B9FED779AB4506B2828D8D /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7D47857015D4928F00EA4BCB = {
+			isa = PBXGroup;
+			children = (
+				7D47858515D4928F00EA4BCB /* DownloadQueuesExample */,
+				7D47857E15D4928F00EA4BCB /* Frameworks */,
+				7D47857C15D4928F00EA4BCB /* Products */,
+				844F5B94860D4CFDB2C69490 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		7D47857C15D4928F00EA4BCB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7D47857B15D4928F00EA4BCB /* DownloadQueuesExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7D47857E15D4928F00EA4BCB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D47857F15D4928F00EA4BCB /* UIKit.framework */,
+				7D47858115D4928F00EA4BCB /* Foundation.framework */,
+				7D47858315D4928F00EA4BCB /* CoreGraphics.framework */,
+				4F2F2005533142D3853DD1C8 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7D47858515D4928F00EA4BCB /* DownloadQueuesExample */ = {
+			isa = PBXGroup;
+			children = (
+				7D4785A415D49AD000EA4BCB /* DownloadQueues */,
+				7D47859E15D49A8A00EA4BCB /* MainViewController.h */,
+				7D47859F15D49A8A00EA4BCB /* MainViewController.m */,
+				7D4785A015D49A8A00EA4BCB /* MainViewController.xib */,
+				7D47858E15D4928F00EA4BCB /* AppDelegate.h */,
+				7D47858F15D4928F00EA4BCB /* AppDelegate.m */,
+				7D47858615D4928F00EA4BCB /* Supporting Files */,
+			);
+			path = DownloadQueuesExample;
+			sourceTree = "<group>";
+		};
+		7D47858615D4928F00EA4BCB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7D47858715D4928F00EA4BCB /* DownloadQueuesExample-Info.plist */,
+				7D47858815D4928F00EA4BCB /* InfoPlist.strings */,
+				7D47858B15D4928F00EA4BCB /* main.m */,
+				7D47858D15D4928F00EA4BCB /* DownloadQueuesExample-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7D4785A415D49AD000EA4BCB /* DownloadQueues */ = {
+			isa = PBXGroup;
+			children = (
+				7D4785AB15D49CD100EA4BCB /* NSFileManager+TempFile.h */,
+				7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */,
+				7D4785A515D49AD000EA4BCB /* DownloadQueues.h */,
+				7D4785A615D49AD000EA4BCB /* DownloadQueues.m */,
+				7D4785A715D49AD000EA4BCB /* DownloadItem.h */,
+				7D4785A815D49AD000EA4BCB /* DownloadItem.m */,
+			);
+			name = DownloadQueues;
+			path = ../../DownloadQueues;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7D47857A15D4928F00EA4BCB /* DownloadQueuesExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7D47859315D4928F00EA4BCB /* Build configuration list for PBXNativeTarget "DownloadQueuesExample" */;
+			buildPhases = (
+				7D47857715D4928F00EA4BCB /* Sources */,
+				7D47857815D4928F00EA4BCB /* Frameworks */,
+				7D47857915D4928F00EA4BCB /* Resources */,
+				B693CA6CCB4C43ABA38AFA38 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DownloadQueuesExample;
+			productName = DownloadQueuesExample;
+			productReference = 7D47857B15D4928F00EA4BCB /* DownloadQueuesExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7D47857215D4928F00EA4BCB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0440;
+				ORGANIZATIONNAME = "Shane Arney";
+			};
+			buildConfigurationList = 7D47857515D4928F00EA4BCB /* Build configuration list for PBXProject "DownloadQueuesExample" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7D47857015D4928F00EA4BCB;
+			productRefGroup = 7D47857C15D4928F00EA4BCB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7D47857A15D4928F00EA4BCB /* DownloadQueuesExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7D47857915D4928F00EA4BCB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D47858A15D4928F00EA4BCB /* InfoPlist.strings in Resources */,
+				7D4785A215D49A8A00EA4BCB /* MainViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B693CA6CCB4C43ABA38AFA38 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7D47857715D4928F00EA4BCB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D47858C15D4928F00EA4BCB /* main.m in Sources */,
+				7D47859015D4928F00EA4BCB /* AppDelegate.m in Sources */,
+				7D4785A115D49A8A00EA4BCB /* MainViewController.m in Sources */,
+				7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */,
+				7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */,
+				7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7D47858815D4928F00EA4BCB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D47858915D4928F00EA4BCB /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7D47859115D4928F00EA4BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		7D47859215D4928F00EA4BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7D47859415D4928F00EA4BCB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844F5B94860D4CFDB2C69490 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadQueuesExample/DownloadQueuesExample-Prefix.pch";
+				INFOPLIST_FILE = "DownloadQueuesExample/DownloadQueuesExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		7D47859515D4928F00EA4BCB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 844F5B94860D4CFDB2C69490 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DownloadQueuesExample/DownloadQueuesExample-Prefix.pch";
+				INFOPLIST_FILE = "DownloadQueuesExample/DownloadQueuesExample-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7D47857515D4928F00EA4BCB /* Build configuration list for PBXProject "DownloadQueuesExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D47859115D4928F00EA4BCB /* Debug */,
+				7D47859215D4928F00EA4BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7D47859315D4928F00EA4BCB /* Build configuration list for PBXNativeTarget "DownloadQueuesExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7D47859415D4928F00EA4BCB /* Debug */,
+				7D47859515D4928F00EA4BCB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7D47857215D4928F00EA4BCB /* Project object */;
+}
