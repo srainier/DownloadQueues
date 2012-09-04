@@ -26,6 +26,9 @@
 @class DownloadItem;
 @class AFURLConnectionOperation;
 
+// TODO: Delegate should be in its own file.
+// TODO: Shouldn't there be NSNotifications for every delegate callback?
+
 @protocol DownloadQueuesDelegate <NSObject>
 
 - (void) downloader:(DownloadQueues*)downloader

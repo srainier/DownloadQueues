@@ -66,6 +66,11 @@
                                    reason:[NSString stringWithFormat:@"Queue %@ already exists", queueName] userInfo:nil];
   }
   
+  // NOTE: it may be advantageous to be able to specify the priority of an operation.  It would make
+  // sense for it to be queue-based, but I only see the following on NSOperation:
+  // - (void)setThreadPriority:(double)priority.
+  // Look into this later if necessary.
+  
   NSOperationQueue* queue = [[NSOperationQueue alloc] init];
   [queueNames_ addObject:queueName];
   [queues_ setObject:queue forKey:queueName];
