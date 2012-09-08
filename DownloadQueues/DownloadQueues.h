@@ -1,5 +1,5 @@
 //
-// DLDownloader.h
+// DownloadQueues.h
 //
 // Copyright (c) 2012 Shane Arney (srainier@gmail.com)
 //
@@ -28,6 +28,13 @@
 
 // TODO: Delegate should be in its own file.
 // TODO: Shouldn't there be NSNotifications for every delegate callback?
+
+// Restart here:
+// 1. delegate goes into its own file.
+// 2. delegate methods are optional.
+// 3. add notifications to go along with delegate calls.
+// 4. add ability to query state of download operation.
+// 5. back to item info controller to actually download the files.
 
 @protocol DownloadQueuesDelegate <NSObject>
 

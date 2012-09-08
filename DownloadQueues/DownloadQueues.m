@@ -1,5 +1,5 @@
 //
-// DLDownloader.m
+// DownloadQueues.m
 //
 // Copyright (c) 2012 Shane Arney (srainier@gmail.com)
 //
