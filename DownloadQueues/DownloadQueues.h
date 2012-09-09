@@ -30,11 +30,6 @@
 // TODO: Delegate should be in its own file.
 // TODO: Shouldn't there be NSNotifications for every delegate callback?
 
-// Restart here:
-// 4. add ability to query state of download operation.
-// 5. back to item info controller to actually download the files.
-
-
 @interface DownloadQueues : NSObject
 
 @property (nonatomic, retain) id<DownloadQueuesDelegate> delegate;
