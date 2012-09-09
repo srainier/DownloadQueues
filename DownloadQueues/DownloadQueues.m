@@ -26,6 +26,25 @@
 #import "NSFileManager+TempFile.h"
 #import "DownloadItem.h"
 
+// Definition of NSNotification constants for DownlaodQueuesDelegate
+NSString* const DQDownloadProgressEvent = @"com.DownloadQueues.DQDownloadProgressEvent";
+NSString* const DQDownloadDidStartEvent = @"com.DownloadQueues.DQDownloadDidStart";
+NSString* const DQDownloadDidPauseEvent = @"com.DownloadQueues.DQDownloadDidPause";
+NSString* const DQDownloadDidResumeEvent = @"com.DownloadQueues.DQDownloadDidResume";
+NSString* const DQDownloadDidCancelEvent = @"com.DownloadQueues.DQDownloadDidCancel";
+NSString* const DQDownloadDidCompleteEvent = @"com.DownloadQueues.DQDownloadDidComplete";
+NSString* const DQDownloadDidFailEvent = @"com.DownloadQueues.DQDownloadDidFail";
+
+// Definition of NSNotification userInfo keys for DownloadQueuesDelegate
+NSString* const DQQueue = @"queue";
+NSString* const DQItem = @"item";
+NSString* const DQOrderInQueue = @"orderInQueue";
+NSString* const DQTotalBytesRead = @"totalBytesRead";
+NSString* const DQTotalBytesExpectedToRead = @"totalBytesExpectedToRead";
+NSString* const DQPercentComplete = @"percentComplete";
+NSString* const DQData = @"data";
+NSString* const DQError = @"error";
+
 @interface DownloadQueues () {
   NSMutableArray* queueNames_;
   NSMutableDictionary* queues_;
@@ -120,7 +139,17 @@
       didPause = NO;
     } else {
       [operation pause];
-      [self.delegate downloader:self queue:queueName didPauseItem:item orderInQueue:orderInQueue];
+      
+      if ([self.delegate respondsToSelector:@selector(downloader:queue:didPauseItem:orderInQueue:)]) {
+        [self.delegate downloader:self queue:queueName didPauseItem:item orderInQueue:orderInQueue];        
+      }
+      
+      [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidPauseEvent
+                                                          object:self
+                                                        userInfo:@{ DQQueue : queueName,
+                                                                     DQItem : item,
+                                                             DQOrderInQueue : @(orderInQueue) }];
+      
       didPause = YES;
     }
   }];
@@ -134,8 +163,16 @@
       didResume = NO;
     } else {
       [operation resume];
-      // NOTE: need other parameters.
-      [self.delegate downloader:self queue:queueName didResumeItem:item orderInQueue:orderInQueue];
+
+      if ([self.delegate respondsToSelector:@selector(downloader:queue:didResumeItem:orderInQueue:)]) {
+        [self.delegate downloader:self queue:queueName didResumeItem:item orderInQueue:orderInQueue];
+      }
+
+      [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidResumeEvent
+                                                          object:self
+                                                        userInfo:@{ DQQueue : queueName,
+                                                                     DQItem : item,
+                                                             DQOrderInQueue : @(orderInQueue) }];
       didResume = YES;
     }
   }];
@@ -165,12 +202,16 @@
         if (0 == [items count]) {
           orderInQueue = NSNotFound; // represents last item removed
         }
+
+        if ([self.delegate respondsToSelector:@selector(downloader:queue:didCancelItem:orderInQueue:)]) {
+          [self.delegate downloader:self queue:queueName didCancelItem:item orderInQueue:orderInQueue];
+        }
         
-        [self.delegate downloader:self
-                            queue:queueName
-                    didCancelItem:item
-                     orderInQueue:orderInQueue];
-        
+        [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidCancelEvent
+                                                            object:self
+                                                          userInfo:@{ DQQueue : queueName,
+                                                                       DQItem : item,
+                                                               DQOrderInQueue : @(orderInQueue)}];
         // TODO: ??? not sure what I'm forgetting here..
         
       }      
@@ -219,6 +260,9 @@
   // Set a progress handler.
   __block id<DownloadQueuesDelegate> blockDelegate = self.delegate;
   [operation setDownloadProgressBlock:^(NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+    // just checking this:
+    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
+
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
       return;
@@ -228,17 +272,31 @@
     item.state = DownloadItemStateInProgress;
     item.progress = progress;
     
-    // Callback the delegate.  Hope this happens on the main queue.
-    [blockDelegate downloader:self
-                        queue:queueName
-                         item:item
-                 orderInQueue:[queueItems indexOfObject:item]
-               totalBytesRead:totalBytesRead
-     totalBytesExpectedToRead:totalBytesExpectedToRead
-              percentComplete:progress];
+    if ([self.delegate respondsToSelector:@selector(downloader:queue:item:orderInQueue:totalBytesRead:totalBytesExpectedToRead:percentComplete:)]) {
+      // Callback the delegate.  Hope this happens on the main queue.
+      [blockDelegate downloader:self
+                          queue:queueName
+                           item:item
+                   orderInQueue:[queueItems indexOfObject:item]
+                 totalBytesRead:totalBytesRead
+       totalBytesExpectedToRead:totalBytesExpectedToRead
+                percentComplete:progress];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadProgressEvent
+                                                        object:self
+                                                      userInfo:@{ DQQueue : queueName,
+                                                                   DQItem : item,
+                                                           DQOrderInQueue : @([queueItems indexOfObject:item]),
+                                                         DQTotalBytesRead : @(totalBytesRead),
+                                               DQTotalBytesExpectedToRead : @(totalBytesExpectedToRead),
+                                                        DQPercentComplete : @(progress) }];
   }];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+    // just checking this:
+    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
+    
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
       return;
@@ -256,8 +314,15 @@
     
     if (outputToFile) {
       // Call the delegate.
-      [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didCompleteWithFile:outputFile];
+      if ([blockDelegate respondsToSelector:@selector(downloader:queue:item:orderInQueue:didCompleteWithFile:)]) {
+        [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didCompleteWithFile:outputFile];
+      }
       
+      [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidCompleteEvent
+                                                          object:self
+                                                        userInfo:@{ DQQueue : queueName,
+                                                                     DQItem : item,
+                                                             DQOrderInQueue : @([queueItems indexOfObject:item]) }];
       // Call the complete callback.
       completeCallback(nil, outputFile);
       
@@ -265,8 +330,16 @@
       // Sanity check that the returned object is an NSData*
       if ([responseObject isKindOfClass:[NSData class]]) {
         // Call the delegate.
-        [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didCompleteWithData:responseObject];
+        if ([blockDelegate respondsToSelector:@selector(downloader:queue:item:orderInQueue:didCompleteWithData:)]) {
+          [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didCompleteWithData:responseObject];
+        }
         
+        [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidCompleteEvent
+                                                            object:self
+                                                          userInfo:@{ DQQueue : queueName,
+                                                                       DQItem : item,
+                                                               DQOrderInQueue : @([queueItems indexOfObject:item]),
+                                                                       DQData : responseObject }];
         // Call the complete callback.
         completeCallback(nil, responseObject);
         
@@ -276,6 +349,9 @@
     }
     
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    // just checking this:
+    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
+    
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
       return;
@@ -291,7 +367,16 @@
     
     // Call the delegate with the error.
     item.state = DownloadItemStateFailed;
-    [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didFailWithError:error];
+    if ([blockDelegate respondsToSelector:@selector(downloader:queue:item:orderInQueue:didFailWithError:)]) {
+      [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didFailWithError:error];
+    }
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidFailEvent
+                                                        object:self
+                                                      userInfo:@{ DQQueue : queueName,
+                                                                   DQItem : item,
+                                                           DQOrderInQueue : @([queueItems indexOfObject:item]),
+                                                                  DQError : error }];
   }];
   
   // Put the operation in the queue.
@@ -301,11 +386,16 @@
   item.progress = 0.0;
   [queueItems addObject:item];
   
-  [self.delegate downloader:self
-                      queue:queueName
-               didStartItem:item
-               orderInQueue:(1 < queueItems.count) ? (queueItems.count - 1) : NSNotFound];
-  
+  NSUInteger orderInQueue = (1 < queueItems.count) ? (queueItems.count - 1) : NSNotFound;
+  if ([self.delegate respondsToSelector:@selector(downloader:queue:didStartItem:orderInQueue:)]) {
+    [self.delegate downloader:self queue:queueName didStartItem:item orderInQueue:orderInQueue];
+  }
+
+  [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidStartEvent
+                                                      object:self
+                                                    userInfo:@{ DQQueue : queueName,
+                                                                 DQItem : item,
+                                                         DQOrderInQueue : @(orderInQueue) }];
   return YES;
 }
 

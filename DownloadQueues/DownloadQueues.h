@@ -22,6 +22,7 @@
 // THE SOFTWARE.
 
 #import <Foundation/Foundation.h>
+#import "DownloadQueuesDelegate.h"
 @class DownloadQueues;
 @class DownloadItem;
 @class AFURLConnectionOperation;
@@ -30,61 +31,9 @@
 // TODO: Shouldn't there be NSNotifications for every delegate callback?
 
 // Restart here:
-// 1. delegate goes into its own file.
-// 2. delegate methods are optional.
-// 3. add notifications to go along with delegate calls.
 // 4. add ability to query state of download operation.
 // 5. back to item info controller to actually download the files.
 
-@protocol DownloadQueuesDelegate <NSObject>
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-               item:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue
-     totalBytesRead:(long long)totalBytesRead
-totalBytesExpectedToRead:(long long)totalBytesExpectedToRead
-    percentComplete:(float)percentComplete;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-       didStartItem:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-       didPauseItem:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-      didResumeItem:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-      didCancelItem:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-               item:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue
-didCompleteWithData:(NSData*)data;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-               item:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue
-didCompleteWithFile:(NSURL*)file;
-
-- (void) downloader:(DownloadQueues*)downloader
-              queue:(NSString*)queueName
-               item:(DownloadItem*)item
-       orderInQueue:(NSUInteger)orderInQueue
-   didFailWithError:(NSError*)error;
-
-@end
 
 @interface DownloadQueues : NSObject
 
