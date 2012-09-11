@@ -264,6 +264,12 @@ NSString* const DQError = @"error";
     NSOutputStream* outputStream = [NSOutputStream outputStreamToFileAtPath:outputFile.relativePath append:NO];
     operation.outputStream = outputStream;
   }
+
+  // Setup as a background task
+  [operation setShouldExecuteAsBackgroundTaskWithExpirationHandler:^{
+    // If background task expires, just cancel the download.
+    [self cancelItem:item];
+  }];
   
   // Set a progress handler.
   __block id<DownloadQueuesDelegate> blockDelegate = self.delegate;
