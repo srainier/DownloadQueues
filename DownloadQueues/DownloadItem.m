@@ -29,14 +29,16 @@
 @synthesize isPaused = isPaused_;
 @synthesize progress = progress_;
 @synthesize url = url_;
+@synthesize userInfo = userInfo_;
 
-- (id) init {
+- (id) initWithUrl:(NSURL*)url userInfo:(id)userInfo {
   self = [super init];
   if (nil != self) {
     state_ = DownloadItemStateUnknown;
     isPaused_ = NO;
     progress_ = 0.0;
-    url_ = nil;
+    url_ = url;
+    userInfo_ = userInfo;
   }
   return self;
 }
@@ -46,10 +48,7 @@
 }
 
 + (DownloadItem*) itemWithUrl:(NSURL*)url userInfo:(id)userInfo {
-  DownloadItem* item = [[DownloadItem alloc] init];
-  item.url = url;
-  item.userInfo = userInfo;
-  return item;
+  return [[DownloadItem alloc] initWithUrl:url userInfo:userInfo];
 }
 
 @end
