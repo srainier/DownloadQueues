@@ -38,7 +38,9 @@
 - (BOOL) createQueueWithName:(NSString*)queueName maxConcurrentDownloads:(NSInteger)maxConcurrentDownloads;
 
 - (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName toFile:(void(^)(NSError*, NSURL*))completeCallback;
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName toFile:(void(^)(NSError*, NSURL*))completeCallback;
 - (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName toData:(void(^)(NSError*, NSData*))completeCallback;
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName toData:(void(^)(NSError*, NSData*))completeCallback;
 
 - (NSArray*) allQueueNames;
 - (NSArray*) itemsInQueue:(NSString*)queueName;

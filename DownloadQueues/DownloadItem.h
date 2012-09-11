@@ -38,7 +38,9 @@ typedef enum {
 @property (nonatomic) BOOL isPaused; // not sure if I need this
 @property (nonatomic) float progress;
 @property (nonatomic, retain) NSURL* url;
+@property (nonatomic, retain) id userInfo;
 
 + (DownloadItem*) itemWithUrl:(NSURL*)url;
++ (DownloadItem*) itemWithUrl:(NSURL*)url userInfo:(id)userInfo;
 
 @end

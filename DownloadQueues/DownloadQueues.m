@@ -52,7 +52,7 @@ NSString* const DQError = @"error";
 }
 
 - (NSOperationQueue*) queueWithName:(NSString*)queueName;
-- (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName outputFile:(NSURL*)outputFile callback:(void(^)(NSError*, id))completeCallback;
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName outputFile:(NSURL*)outputFile callback:(void(^)(NSError*, id))completeCallback;
 - (void) forItem:(DownloadItem*)item perform:(void (^)(NSString* queueName, AFURLConnectionOperation* operation, NSUInteger orderInQueue))perform;
 
 @end
@@ -101,18 +101,26 @@ NSString* const DQError = @"error";
 }
 
 - (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName toFile:(void(^)(NSError*, NSURL*))completeCallback {
+  return [self downloadUrl:url userInfo:nil inQueue:queueName toFile:completeCallback];
+}
+
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName toFile:(void(^)(NSError*, NSURL*))completeCallback {
   
   // Create a file that the downloaded data can be written to.
   NSURL* tempFile = [[NSFileManager defaultManager] createTemporaryFile];
   
   // Call the helper
-  return [self downloadUrl:url inQueue:queueName outputFile:tempFile callback:completeCallback];
+  return [self downloadUrl:url userInfo:userInfo inQueue:queueName outputFile:tempFile callback:completeCallback];
 }
 
 - (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName toData:(void(^)(NSError*, NSData*))completeCallback {
+  return [self downloadUrl:url userInfo:nil inQueue:queueName toData:completeCallback];
+}
+
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName toData:(void(^)(NSError*, NSData*))completeCallback {
 
   // Call the helper
-  return [self downloadUrl:url inQueue:queueName outputFile:nil callback:completeCallback];
+  return [self downloadUrl:url userInfo:userInfo inQueue:queueName outputFile:nil callback:completeCallback];
 }
 
 - (NSArray*) allQueueNames {
@@ -237,7 +245,7 @@ NSString* const DQError = @"error";
   return queue;
 }
 
-- (BOOL) downloadUrl:(NSURL*)url inQueue:(NSString*)queueName outputFile:(NSURL*)outputFile callback:(void(^)(NSError*, id))completeCallback {
+- (BOOL) downloadUrl:(NSURL*)url userInfo:(id)userInfo inQueue:(NSString*)queueName outputFile:(NSURL*)outputFile callback:(void(^)(NSError*, id))completeCallback {
   
   // Get the desired queue.
   NSOperationQueue* queue = [self queueWithName:queueName];
@@ -246,7 +254,7 @@ NSString* const DQError = @"error";
   NSURLRequest* request = [NSURLRequest requestWithURL:url];
   AFHTTPRequestOperation* operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
   
-  DownloadItem* item = [DownloadItem itemWithUrl:url];
+  DownloadItem* item = [DownloadItem itemWithUrl:url userInfo:userInfo];
   NSMutableArray* queueItems = [itemsByQueue_ objectForKey:queueName];
   
   // Create a file that the downloaded data can be written to.

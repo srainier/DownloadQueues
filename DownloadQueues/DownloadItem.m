@@ -42,8 +42,13 @@
 }
 
 + (DownloadItem*) itemWithUrl:(NSURL*)url {
+  return [DownloadItem itemWithUrl:url userInfo:nil];
+}
+
++ (DownloadItem*) itemWithUrl:(NSURL*)url userInfo:(id)userInfo {
   DownloadItem* item = [[DownloadItem alloc] init];
   item.url = url;
+  item.userInfo = userInfo;
   return item;
 }
 
