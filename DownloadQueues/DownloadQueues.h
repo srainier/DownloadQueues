@@ -27,9 +27,6 @@
 @class DownloadItem;
 @class AFURLConnectionOperation;
 
-// TODO: Delegate should be in its own file.
-// TODO: Shouldn't there be NSNotifications for every delegate callback?
-
 @interface DownloadQueues : NSObject
 
 @property (nonatomic, retain) id<DownloadQueuesDelegate> delegate;

@@ -338,7 +338,9 @@ NSString* const DQError = @"error";
                                                                      DQItem : item,
                                                              DQOrderInQueue : @([queueItems indexOfObject:item]) }];
       // Call the complete callback.
-      completeCallback(nil, outputFile);
+      if (NULL != completeCallback) {
+        completeCallback(nil, outputFile);
+      }
       
     } else {
       // Sanity check that the returned object is an NSData*
@@ -355,10 +357,26 @@ NSString* const DQError = @"error";
                                                                DQOrderInQueue : @([queueItems indexOfObject:item]),
                                                                        DQData : responseObject }];
         // Call the complete callback.
-        completeCallback(nil, responseObject);
+        if (NULL != completeCallback) {
+          completeCallback(nil, responseObject);
+        }
         
       } else {
-        completeCallback([NSError errorWithDomain:@"DLUnknownResponseObject" code:0 userInfo:nil], nil);
+        NSError* error = [NSError errorWithDomain:@"DLUnknownResponseObject" code:0 userInfo:nil];
+        // Call the delegate
+        if ([blockDelegate respondsToSelector:@selector(downloader:queue:item:orderInQueue:didFailWithError:)]) {
+          [blockDelegate downloader:self queue:queueName item:item orderInQueue:orderInQueue didFailWithError:error];
+        }
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:DQDownloadDidFailEvent
+                                                            object:self
+                                                          userInfo:@{ DQQueue : queueName,
+                                                                       DQItem : item,
+                                                               DQOrderInQueue : @(orderInQueue),
+                                                                      DQError : error }];
+        if (NULL != completeCallback) {
+          completeCallback(error, nil);
+        }
       }
     }
     
@@ -391,6 +409,10 @@ NSString* const DQError = @"error";
                                                                    DQItem : item,
                                                            DQOrderInQueue : @([queueItems indexOfObject:item]),
                                                                   DQError : error }];
+    
+    if (NULL != completeCallback) {
+      completeCallback(error, nil);
+    }
   }];
   
   // Put the operation in the queue.
