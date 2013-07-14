@@ -274,8 +274,6 @@ NSString* const DQError = @"error";
   // Set a progress handler.
   __block id<DownloadQueuesDelegate> blockDelegate = self.delegate;
   [operation setDownloadProgressBlock:^(NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
-    // just checking this:
-    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
 
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
@@ -308,8 +306,6 @@ NSString* const DQError = @"error";
   }];
   
   [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
-    // just checking this:
-    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
     
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
@@ -381,8 +377,6 @@ NSString* const DQError = @"error";
     }
     
   } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    // just checking this:
-    NSAssert(dispatch_get_current_queue() == dispatch_get_main_queue(), @"Assuming this returns in main queue");
     
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
