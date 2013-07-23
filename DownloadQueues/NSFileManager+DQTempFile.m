@@ -1,5 +1,5 @@
 //
-// NSFileManager+TempFile.m
+// NSFileManager+DQTempFile.m
 //
 // Copyright (c) 2012 Shane Arney (srainier@gmail.com)
 //
@@ -21,10 +21,10 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#import "NSFileManager+TempFile.h"
+#import "NSFileManager+DQTempFile.h"
 #import <Foundation/NSString.h>
 
-@implementation NSFileManager (TempFile)
+@implementation NSFileManager (DQTempFile)
 
 - (NSString*) createTempFileHelper:(int*)fileDescriptor {
 

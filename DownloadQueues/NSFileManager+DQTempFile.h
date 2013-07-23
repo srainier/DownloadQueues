@@ -1,5 +1,5 @@
 //
-// NSFileManager+TempFile.h
+// NSFileManager+DQTempFile.h
 //
 // Copyright (c) 2012 Shane Arney (srainier@gmail.com)
 //
@@ -24,7 +24,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSFileManager (TempFile)
+@interface NSFileManager (DQTempFile)
 
 - (NSFileHandle*) openTemporaryFile;
 

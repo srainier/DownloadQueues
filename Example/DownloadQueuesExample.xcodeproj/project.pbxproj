@@ -18,11 +18,12 @@
 		7D4785A215D49A8A00EA4BCB /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785A015D49A8A00EA4BCB /* MainViewController.xib */; };
 		7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A615D49AD000EA4BCB /* DownloadQueues.m */; };
 		7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785A815D49AD000EA4BCB /* DownloadItem.m */; };
-		7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */; };
+		7D4785AD15D49CD100EA4BCB /* NSFileManager+DQTempFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785AC15D49CD100EA4BCB /* NSFileManager+DQTempFile.m */; };
 		7D4785B415D4A26900EA4BCB /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785AF15D4A26900EA4BCB /* .gitignore */; };
 		7D4785B515D4A26900EA4BCB /* KeyedFileStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D4785B115D4A26900EA4BCB /* KeyedFileStorage.m */; };
 		7D4785B615D4A26900EA4BCB /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785B215D4A26900EA4BCB /* LICENSE */; };
 		7D4785B715D4A26900EA4BCB /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7D4785B315D4A26900EA4BCB /* README.md */; };
+		7D657AD8179B6F5700A0EB26 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7D657AD7179B6F5700A0EB26 /* Default-568h@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,13 +45,14 @@
 		7D4785A615D49AD000EA4BCB /* DownloadQueues.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadQueues.m; sourceTree = "<group>"; };
 		7D4785A715D49AD000EA4BCB /* DownloadItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DownloadItem.h; sourceTree = "<group>"; };
 		7D4785A815D49AD000EA4BCB /* DownloadItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DownloadItem.m; sourceTree = "<group>"; };
-		7D4785AB15D49CD100EA4BCB /* NSFileManager+TempFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+TempFile.h"; sourceTree = "<group>"; };
-		7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+TempFile.m"; sourceTree = "<group>"; };
+		7D4785AB15D49CD100EA4BCB /* NSFileManager+DQTempFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFileManager+DQTempFile.h"; sourceTree = "<group>"; };
+		7D4785AC15D49CD100EA4BCB /* NSFileManager+DQTempFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileManager+DQTempFile.m"; sourceTree = "<group>"; };
 		7D4785AF15D4A26900EA4BCB /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		7D4785B015D4A26900EA4BCB /* KeyedFileStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyedFileStorage.h; sourceTree = "<group>"; };
 		7D4785B115D4A26900EA4BCB /* KeyedFileStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyedFileStorage.m; sourceTree = "<group>"; };
 		7D4785B215D4A26900EA4BCB /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		7D4785B315D4A26900EA4BCB /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		7D657AD7179B6F5700A0EB26 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		844F5B94860D4CFDB2C69490 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -72,6 +74,7 @@
 		7D47857015D4928F00EA4BCB = {
 			isa = PBXGroup;
 			children = (
+				7D657AD7179B6F5700A0EB26 /* Default-568h@2x.png */,
 				7D47858515D4928F00EA4BCB /* DownloadQueuesExample */,
 				7D47857E15D4928F00EA4BCB /* Frameworks */,
 				7D47857C15D4928F00EA4BCB /* Products */,
@@ -127,8 +130,8 @@
 		7D4785A415D49AD000EA4BCB /* DownloadQueues */ = {
 			isa = PBXGroup;
 			children = (
-				7D4785AB15D49CD100EA4BCB /* NSFileManager+TempFile.h */,
-				7D4785AC15D49CD100EA4BCB /* NSFileManager+TempFile.m */,
+				7D4785AB15D49CD100EA4BCB /* NSFileManager+DQTempFile.h */,
+				7D4785AC15D49CD100EA4BCB /* NSFileManager+DQTempFile.m */,
 				7D4785A515D49AD000EA4BCB /* DownloadQueues.h */,
 				7D4785A615D49AD000EA4BCB /* DownloadQueues.m */,
 				7D4785A715D49AD000EA4BCB /* DownloadItem.h */,
@@ -177,7 +180,7 @@
 		7D47857215D4928F00EA4BCB /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0440;
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Shane Arney";
 			};
 			buildConfigurationList = 7D47857515D4928F00EA4BCB /* Build configuration list for PBXProject "DownloadQueuesExample" */;
@@ -207,6 +210,7 @@
 				7D4785B415D4A26900EA4BCB /* .gitignore in Resources */,
 				7D4785B615D4A26900EA4BCB /* LICENSE in Resources */,
 				7D4785B715D4A26900EA4BCB /* README.md in Resources */,
+				7D657AD8179B6F5700A0EB26 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +243,7 @@
 				7D4785A115D49A8A00EA4BCB /* MainViewController.m in Sources */,
 				7D4785A915D49AD000EA4BCB /* DownloadQueues.m in Sources */,
 				7D4785AA15D49AD000EA4BCB /* DownloadItem.m in Sources */,
-				7D4785AD15D49CD100EA4BCB /* NSFileManager+TempFile.m in Sources */,
+				7D4785AD15D49CD100EA4BCB /* NSFileManager+DQTempFile.m in Sources */,
 				7D4785B515D4A26900EA4BCB /* KeyedFileStorage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -265,6 +269,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
@@ -292,6 +299,9 @@
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;

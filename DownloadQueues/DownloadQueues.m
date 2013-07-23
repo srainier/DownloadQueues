@@ -23,7 +23,7 @@
 
 #import "DownloadQueues.h"
 #import "AFHTTPRequestOperation.h"
-#import "NSFileManager+TempFile.h"
+#import "NSFileManager+DQTempFile.h"
 #import "DownloadItem.h"
 
 // Definition of NSNotification constants for DownlaodQueuesDelegate
@@ -57,8 +57,6 @@ NSString* const DQError = @"error";
 
 @end
 
-@interface DownloadItem (StreamDelegate) <NSStreamDelegate>
-@end
 
 @implementation DownloadQueues
 
@@ -81,15 +79,9 @@ NSString* const DQError = @"error";
 - (BOOL) createQueueWithName:(NSString*)queueName maxConcurrentDownloads:(NSInteger)maxConcurrentDownloads {
   
   if (nil != [queues_ objectForKey:queueName]) {
-    @throw [NSException exceptionWithName:@"CreateQueueFailure"
-                                   reason:[NSString stringWithFormat:@"Queue %@ already exists", queueName] userInfo:nil];
+    return NO;
   }
-  
-  // NOTE: it may be advantageous to be able to specify the priority of an operation.  It would make
-  // sense for it to be queue-based, but I only see the following on NSOperation:
-  // - (void)setThreadPriority:(double)priority.
-  // Look into this later if necessary.
-  
+
   NSOperationQueue* queue = [[NSOperationQueue alloc] init];
   [queueNames_ addObject:queueName];
   [queues_ setObject:queue forKey:queueName];
@@ -194,12 +186,8 @@ NSString* const DQError = @"error";
     if (NSNotFound != index) {
       *stop = YES;
 
-      // NOTE: I'm doing my own special bit of handling of cancelling.  I'm not yet sure
-      // that I've successfully guarded all race conditions whereby only one of completed/
-      // failed/cancelled callback will get called.
       AFURLConnectionOperation* operation = [[[queues_ objectForKey:queueName] operations] objectAtIndex:index];
       if (!operation.isFinished) {
-        // NOTE: this won't work if we send immutable items out of interface
         item.state = DownloadItemStateCancelled;
         
         [operation cancel];
@@ -220,8 +208,6 @@ NSString* const DQError = @"error";
                                                           userInfo:@{ DQQueue : queueName,
                                                                        DQItem : item,
                                                                DQOrderInQueue : @(orderInQueue)}];
-        // TODO: ??? not sure what I'm forgetting here..
-        
       }      
     }
   }];
@@ -273,7 +259,7 @@ NSString* const DQError = @"error";
   
   // Set a progress handler.
   __block id<DownloadQueuesDelegate> blockDelegate = self.delegate;
-  [operation setDownloadProgressBlock:^(NSInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
+  [operation setDownloadProgressBlock:^(NSUInteger bytesRead, long long totalBytesRead, long long totalBytesExpectedToRead) {
 
     // No callbacks if the item is cancelled.
     if (DownloadItemStateCancelled == item.state) {
@@ -438,14 +424,6 @@ NSString* const DQError = @"error";
       *stop = YES;
     }
   }];
-}
-
-@end
-
-@implementation DownloadItem (StreamDelegate)
-
-- (void)stream:(NSStream *)theStream handleEvent:(NSStreamEvent)streamEvent {
-  
 }
 
 @end

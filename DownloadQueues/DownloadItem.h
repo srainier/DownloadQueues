@@ -32,15 +32,55 @@ typedef enum {
   DownloadItemStateFailed
 } DownloadItemState;
 
+/**
+ `DownloadItem` represents an asset being downloaded by a `DownloadQueues` object.
+ */
 @interface DownloadItem : NSObject
 
+/**
+ The current state of the download.
+ */
 @property (nonatomic) DownloadItemState state;
-@property (nonatomic) BOOL isPaused; // not sure if I need this
+
+/**
+ The paused state of the download.
+ */
+@property (nonatomic) BOOL isPaused;
+
+/**
+ The percent-complete progress value of the download. This value will be between 0 and 1.
+ */
 @property (nonatomic) float progress;
+
+/**
+ The source url of the download.
+ */
 @property (nonatomic, strong, readonly) NSURL* url;
+
+/**
+ User metadata attached to the download.
+ */
 @property (nonatomic, strong, readonly) id userInfo;
 
+/**
+ Create a new `DownloadItem *` for the input url.
+ 
+ This method does not perform a download of the asset at the url. Instead the caller should use a `DownloadQueues` object to initiate a download and retrieve the corresponding `DownloadItem` object.
+ 
+ @param url The url for the download.
+ @return The created `DownloadItem` object.
+ */
 + (DownloadItem*) itemWithUrl:(NSURL*)url;
+
+/**
+ Create a new `DownloadItem *` for the input url.
+ 
+ This method does not perform a download of the asset at the url. Instead the caller should use a `DownloadQueues` object to initiate a download and retrieve the corresponding `DownloadItem` object.
+ 
+ @param url The url for the download.
+ @param userInfo User metadata to attached to the object.
+ @return The created `DownloadItem` object.
+ */
 + (DownloadItem*) itemWithUrl:(NSURL*)url userInfo:(id)userInfo;
 
 @end
